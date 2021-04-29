@@ -43,7 +43,7 @@ Don't worry if you use Qt Creator, you can forgot about Visual Studio requiremen
 
 &emsp;&emsp;2) Without [`git`](https://git-scm.com/)
 
-&emsp;&emsp;&emsp;At main page of this repository you should see a green button named `Code`. Press it, then press `Download ZIP`.
+&emsp;&emsp;&emsp;At main page of this repository you should see a green button named `Code`. Press it, then press `Download ZIP`. Don't forget to extract files somewhere!
 
 ---
 * <ins>***FileWatcher build***</ins>
