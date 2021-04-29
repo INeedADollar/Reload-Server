@@ -21,6 +21,9 @@ Server.exe it's the [Python server](src/server/server.py) and filewatcher it's a
 5. Have fun using the app. If you have any recommendations feel free to post in the [Discussions section](DISCUSSIONS) and any bugs you have post in [Issues](ISSUES). Thank you! 🤗
 
 
+https://user-images.githubusercontent.com/58915954/116588167-e112fe80-a923-11eb-8a01-30d18cf16b09.mp4
+
+
 ## Prerequisites
 Python 3.5+, Microsoft Visual Studio 2019 (latest version recommended) with Windows SDK and C++ package installed, Qt Library 5.14 (it should work with newer versions too).
 Don't worry if you use Qt Creator, you can forgot about Visual Studio requirements. Just create a Qt Creator project and add FileWatcher files to it.
