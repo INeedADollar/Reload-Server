@@ -10,6 +10,7 @@ Windows app that let's you build a website easier by reloading it at every file 
 ## Using app
 
 To start using the app, even if you compiled yourself or you downloaded from [Releases section](https://github.com/INeedADollar/Reload-Server/releases), you need to have a file structure like this:
+
 <br>![image](https://user-images.githubusercontent.com/58915954/116579595-339bed00-a91b-11eb-944b-faaa45dc2f58.png)
 
 Server.exe it's the [Python server](src/server/server.py) and filewatcher it's a folder that contains [FileWatcher app](src/filewatcher) that watches files for changes. 
@@ -20,7 +21,7 @@ Server.exe it's the [Python server](src/server/server.py) and filewatcher it's a
 <br>(Don't worry about script added in your HTML file, it's only for reloading your webpage, you can delete it when you finished the site)
 4. Open a browser that supports WebSockets and type `localhost:5000/<your-website_file-name>.html`
 5. Make sure you have a green message saying `SOCKET CONNECTED` in console. If you don't have this message reload won't work. (TIP: Make sure you typed the address correctly in your browser)
-6. Have fun using the app. If you have any recommendations feel free to post in the [Discussions section](https://github.com/INeedADollar/Reload-Server/discussions) and any bugs you have post in [Issues](https://github.com/INeedADollar/Reload-Server/issues). Thank you! 🤗
+6. Have fun using the app. If you have any recommendations feel free to post in the [Discussions section](https://github.com/INeedADollar/Reload-Server/discussions) and any bugs you find post in [Issues](https://github.com/INeedADollar/Reload-Server/issues). Thank you! 🤗
 
 
 https://user-images.githubusercontent.com/58915954/116588167-e112fe80-a923-11eb-8a01-30d18cf16b09.mp4
