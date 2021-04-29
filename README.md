@@ -36,3 +36,37 @@ Don't worry if you use Qt Creator, you can forgot about Visual Studio requiremen
 * **FileWatcher build**
 
 &emsp;&emsp;1. Open Visual Studio and select `Open a project` option. Go to folder where you have source code of [FileWatcher](src/filewatcher) and select `FileWatcher.sln` file.
+
+&emsp;&emsp;2. Change build configuration to your needs and make sure it's in Release mode (default should be `Debug | x86`).
+
+&emsp;&emsp;3. Click `Build` from upper menu, then click `Build solution`.
+
+&emsp;&emsp;4. After succesfull build make sure to deploy the app. ([Read how to deploy a Qt App](https://doc.qt.io/qt-5/windows-deployment.html))
+
+&emsp;&emsp;5. If you understand what you read or you know how to deploy the app, skip to step 9. Delete all files where your exe file was created, except, of course, the exe file. Then simply search in taskbar `Qt`, should appear something like `Qt <QT_VERSION> (MSVC <QT_MSVC_VERSION> <PLATFORM_ARHITECTURE> bit)` (e.g. Qt 5.14.2 (MSVC 2017 32-bit)) and press Enter
+
+&emsp;&emsp;6. In the console that appears type `windeployqt <path-to-your-exe-file>` (e.g. windeployqt C:/Users/Mirel/Desktop/FileWatcher/Release/FileWatcher.exe) (you can copy that path)
+
+&emsp;&emsp;7. ***Make sure that exe file is called `FileWatcher.exe` or app won't work!***
+
+&emsp;&emsp;8. Create a folder where you want, inside it create a folder called `filewatcher`. Copy all contents of folder where your exe file was created in `filewatcher` folder.
+
+&emsp;&emsp;9. Be happy 🤠
+
+* **Server build**
+
+&emsp;&emsp;1. Open a cmd window ***as admin!***. Type the drive letter where `server.py` file is located followed by `:` (e.g. if `server.py` file is located in C:/Users/Mirel/Desktop/server/ type in cmd `C:`)
+
+&emsp;&emsp;2. Type `cd <path-to-server-folder` (e.g. cd C:/Users/Mirel/Desktop/server/)
+
+&emsp;&emsp;3. Type `pip install -r requirements.txt`
+
+&emsp;&emsp;4. Type `pip install pyinstaller`
+
+&emsp;&emsp;5. Type `pyinstaller --onefile --icon=server.ico server.py`. 
+
+&emsp;&emsp;6. Go to `dist` folder that was created and you should see your exe file.
+
+&emsp;&emsp;7. Copy the exe file to folder that you previously created for `filewatcher` folder. ([See the file tree](https://github.com/INeedADollar/Reload-Server#using-app))
+
+&emsp;&emsp;8. Be more happy 🤠
