@@ -66,6 +66,8 @@ Don't worry if you use Qt Creator, you can forgot about Visual Studio requiremen
 
 &emsp;&emsp;9. Be happy 🤠
 
+<ins>***If you compile the app with QtCreator you should have at the end the same files located in same directories as described earlier***</ins>
+
 ---
 * <ins>***Server build***</ins>
 
