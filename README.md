@@ -30,7 +30,7 @@ https://user-images.githubusercontent.com/58915954/116588167-e112fe80-a923-11eb-
 ## Build
 
 ### Prerequisites
-[Python 3.5+](https://www.python.org/downloads/), [Microsoft Visual Studio 2019](https://visualstudio.microsoft.com/) (latest version recommended) with Windows SDK and C++ package installed, [Qt Library 5.14](https://www.qt.io/download) (it should work with newer versions too).
+[Python 3.5+](https://www.python.org/downloads/), [Microsoft Visual Studio 2019](https://visualstudio.microsoft.com/) (latest version recommended) with Windows SDK and C++ package installed, [Qt Library 5.14](https://www.qt.io/download) (it should work with newer versions too) with [Visual Studion Qt Plugin](https://marketplace.visualstudio.com/items?itemName=TheQtCompany.QtVisualStudioTools-19123).
 Don't worry if you use Qt Creator, you can forgot about Visual Studio requirements. Just create a Qt Creator project and add FileWatcher files to it.
   
 ### Download and build
