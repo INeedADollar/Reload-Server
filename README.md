@@ -33,8 +33,9 @@ https://user-images.githubusercontent.com/58915954/116588167-e112fe80-a923-11eb-
 Don't worry if you use Qt Creator, you can forgot about Visual Studio requirements. Just create a Qt Creator project and add FileWatcher files to it.
   
 ### Download and build
-* **FileWatcher build**
 
+---
+* **FileWatcher build**
 &emsp;&emsp;1. Open Visual Studio and select `Open a project` option. Go to folder where you have source code of [FileWatcher](src/filewatcher) and select `FileWatcher.sln` file.
 
 &emsp;&emsp;2. Change build configuration to your needs and make sure it's in Release mode (default should be `Debug | x86`).
@@ -53,6 +54,7 @@ Don't worry if you use Qt Creator, you can forgot about Visual Studio requiremen
 
 &emsp;&emsp;9. Be happy 🤠
 
+---
 * **Server build**
 
 &emsp;&emsp;1. Open a cmd window ***as admin!***. Type the drive letter where `server.py` file is located followed by `:` (e.g. if `server.py` file is located in C:/Users/Mirel/Desktop/server/ type in cmd `C:`)
