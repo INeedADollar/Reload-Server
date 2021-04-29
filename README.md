@@ -3,7 +3,6 @@
 [![C++](https://img.shields.io/badge/language-C%2B%2B-%23f34b7d.svg?style=plastic)](https://en.wikipedia.org/wiki/C%2B%2B)
 [![Windows](https://img.shields.io/badge/platform-Windows-0078d7.svg?style=plastic)](https://en.wikipedia.org/wiki/Microsoft_Windows)
 [![License](https://img.shields.io/github/github/license/INeedADollar/Reload-Server?style=plastic)](LICENSE)
-![Windows](https://github.com/INeedADollar/Reload-Server/workflows/Windows/badge.svg?branch=master&event=push)
 
 Windows app that let's you build a website easier by reloading it at every file save. It also supports css and javascript files, updating the list of files to watch for changes at every file save. P.S. Browser with WebSockets support needed in order to work!
 
@@ -34,3 +33,6 @@ https://user-images.githubusercontent.com/58915954/116588167-e112fe80-a923-11eb-
 Don't worry if you use Qt Creator, you can forgot about Visual Studio requirements. Just create a Qt Creator project and add FileWatcher files to it.
   
 ### Download and build
+* **FileWatcher build**
+
+&emsp;&emsp;1. Open Visual Studio and select `Open a project` option. Go to folder where you have source code of [FileWatcher](src/filewatcher) and select `FileWatcher.sln` file.
