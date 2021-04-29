@@ -35,7 +35,18 @@ Don't worry if you use Qt Creator, you can forgot about Visual Studio requiremen
 ### Download and build
 
 ---
-* ***FileWatcher build***
+* <ins>***Download***</ins>
+
+&emsp;&emsp;1) With [`git`](https://git-scm.com/)
+
+&emsp;&emsp;&emsp;Open [`git`](https://git-scm.com/) where you want and type `git clone https://github.com/INeedADollar/Reload-Server.git`
+
+&emsp;&emsp;1) Without [`git`](https://git-scm.com/)
+
+&emsp;&emsp;&emsp;At main page of this repository you should see a green button named `Code`. Press it, then press `Download ZIP`.
+
+---
+* <ins>***FileWatcher build***</ins>
 
 &emsp;&emsp;1. Open Visual Studio and select `Open a project` option. Go to folder where you have source code of [FileWatcher](src/filewatcher) and select `FileWatcher.sln` file.
 
@@ -56,7 +67,7 @@ Don't worry if you use Qt Creator, you can forgot about Visual Studio requiremen
 &emsp;&emsp;9. Be happy 🤠
 
 ---
-* ***Server build***
+* <ins>***Server build***</ins>
 
 &emsp;&emsp;1. Open a cmd window ***as admin!***. Type the drive letter where `server.py` file is located followed by `:` (e.g. if `server.py` file is located in C:/Users/Mirel/Desktop/server/ type in cmd `C:`)
 
