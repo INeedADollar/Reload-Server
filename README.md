@@ -11,7 +11,7 @@ Windows app that let's you build a website easier by reloading it at every file 
 
 To start using the app, even if you compiled yourself or you downloaded from [Releases section](https://github.com/INeedADollar/Reload-Server/releases), you need to have a file structure like this:
 
-<br>![image](https://user-images.githubusercontent.com/58915954/116579595-339bed00-a91b-11eb-944b-faaa45dc2f58.png)
+![image](https://user-images.githubusercontent.com/58915954/116579595-339bed00-a91b-11eb-944b-faaa45dc2f58.png)
 
 Server.exe it's the [Python server](src/server/server.py) and filewatcher it's a folder that contains [FileWatcher app](src/filewatcher) that watches files for changes. 
 
@@ -30,7 +30,7 @@ https://user-images.githubusercontent.com/58915954/116588167-e112fe80-a923-11eb-
 ## Build
 
 ### Prerequisites
-Python 3.5+, Microsoft Visual Studio 2019 (latest version recommended) with Windows SDK and C++ package installed, Qt Library 5.14 (it should work with newer versions too).
+[Python 3.5+](https://www.python.org/downloads/), [Microsoft Visual Studio 2019](https://visualstudio.microsoft.com/) (latest version recommended) with Windows SDK and C++ package installed, [Qt Library 5.14](https://www.qt.io/download) (it should work with newer versions too).
 Don't worry if you use Qt Creator, you can forgot about Visual Studio requirements. Just create a Qt Creator project and add FileWatcher files to it.
   
 ### Download and build
