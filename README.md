@@ -41,7 +41,7 @@ Don't worry if you use Qt Creator, you can forgot about Visual Studio requiremen
 
 &emsp;&emsp;&emsp;Open [`git`](https://git-scm.com/) where you want and type `git clone https://github.com/INeedADollar/Reload-Server.git`
 
-&emsp;&emsp;1) Without [`git`](https://git-scm.com/)
+&emsp;&emsp;2) Without [`git`](https://git-scm.com/)
 
 &emsp;&emsp;&emsp;At main page of this repository you should see a green button named `Code`. Press it, then press `Download ZIP`.
 
@@ -58,7 +58,7 @@ Don't worry if you use Qt Creator, you can forgot about Visual Studio requiremen
 
 &emsp;&emsp;5. If you understand what you read or you know how to deploy the app, skip to step 9. Delete all files where your exe file was created, except, of course, the exe file. Then simply search in taskbar `Qt`, should appear something like `Qt <QT_VERSION> (MSVC <QT_MSVC_VERSION> <PLATFORM_ARHITECTURE> bit)` (e.g. Qt 5.14.2 (MSVC 2017 32-bit)) and press Enter
 
-&emsp;&emsp;6. In the console that appears type `windeployqt <path-to-your-exe-file>` (e.g. windeployqt C:/Users/Mirel/Desktop/FileWatcher/Release/FileWatcher.exe) (you can copy that path)
+&emsp;&emsp;6. In the console that appears type `windeployqt <path-to-your-exe-file>` (e.g. windeployqt C:/Users/Mirel/Desktop/FileWatcher/Release/FileWatcher.exe)
 
 &emsp;&emsp;7. ***Make sure that exe file is called `FileWatcher.exe` or app won't work!***
 
