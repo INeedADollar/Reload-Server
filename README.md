@@ -83,6 +83,6 @@ Don't worry if you use Qt Creator, you can forget about Visual Studio requiremen
 
 &emsp;&emsp;6. Go to `dist` folder that was created and you should see your exe file.
 
-&emsp;&emsp;7. Copy the exe file to folder that you previously created for `filewatcher` folder. ([See the file tree](https://github.com/INeedADollar/Reload-Server#using-app))
+&emsp;&emsp;7. Copy the exe file to folder that you previously created for `filewatcher` folder. ([See the file tree](https://github.com/INeedADollar/Reload-Server#how-to-use))
 
 &emsp;&emsp;8. Be even happier 🤠
