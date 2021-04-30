@@ -92,7 +92,7 @@ class Server:                                                                   
 #******************************************************************************************************************************************************#
 
 
-#******************************************************************************************************************************************************#  
+#******************************************************************************************************************************************************#
 class FileWatcherProcess:                                                                                                                              #
                                                                                                                                                        #
     """Represents the process of FileWatcher"""                                                                                                        #
@@ -135,8 +135,8 @@ class FileWatcherProcess:                                                       
                                                                                                                                                        #
         while True:                                                                                                                                    #
             line = fileWatcherProcess.proc.stdout.readline().decode("utf-8")                                                                           #
-                                                                                                                                                       #                                                                                                                                     
-            if line == '':                                                                                                                             #                                                   
+                                                                                                                                                       #
+            if line == '':                                                                                                                             #
                 break;                                                                                                                                 #
                                                                                                                                                        #
             if line == "Reload site\r\n":                                                                                                              #
@@ -180,7 +180,7 @@ class FileWatcherProcess:                                                       
                                                                                                                                                        #
         """Static method for closing the process. Used when needing a static method"""                                                                 #
                                                                                                                                                        #
-        if isinstance(fileWatcherProcess, FileWatcherProcess):                                                                                         #                                                   
+        if isinstance(fileWatcherProcess, FileWatcherProcess):                                                                                         #
             fileWatcherProcess.closeProcess()                                                                                                          #
 #******************************************************************************************************************************************************#
 
@@ -240,4 +240,4 @@ if __name__ == "__main__":                                                      
                                                                                                                                                        #
     atexit.register(FileWatcherProcess.close_proc, [server.proc])                                                                                      #
     server.startServer()                                                                                                                               #
-#******************************************************************************************************************************************************#    
+#******************************************************************************************************************************************************#
