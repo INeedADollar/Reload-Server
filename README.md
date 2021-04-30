@@ -18,7 +18,7 @@ Server.exe it's the [Python server](src/server/server.py) and filewatcher it's a
 1. Open server.exe (If you are prompted to allow access in Windows Firewall, press Allow Access button) 
 2. A window to choose your website HTML file will appear on the screen. Go to your website folder and choose that HTML file 
 <br><ins>***(Don't worry about script added in your HTML file, it's only for reloading your webpage, you can delete it when you finished the site)***</ins>
-4. Open a browser that supports WebSockets and type `localhost:5000/<your-website_file-name>.html`
+4. Open a browser that supports WebSockets (all modern browser should support them) and type `localhost:5000/<your-website_file-name>.html`
 5. Make sure you have a green message saying `SOCKET CONNECTED` in console. If you don't have this message reload won't work. (TIP: Make sure you typed the address correctly in your browser)
 6. Have fun using the app. If you have any recommendations feel free to post in the [Discussions section](https://github.com/INeedADollar/Reload-Server/discussions) and any bugs you find post in [Issues](https://github.com/INeedADollar/Reload-Server/issues). Thank you! 🤗
 
