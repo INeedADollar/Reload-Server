@@ -39,16 +39,16 @@ class _CursorInfo(ctypes.Structure):                                            
                                                                                                                                                        #
     """Represents a WinApi CursorInfo structure"""                                                                                                     #
                                                                                                                                                        #
-    _fields_ = [("size", ctypes.c_int),                                                                                                                # 
-                ("visible", ctypes.c_byte)]                                                                                                            # 
-                                                                                                                                                       # 
-def hide_cursor():                                                                                                                                     # 
+    _fields_ = [("size", ctypes.c_int),                                                                                                                #
+                ("visible", ctypes.c_byte)]                                                                                                            #
+                                                                                                                                                       #
+def hide_cursor():                                                                                                                                     #
                                                                                                                                                        #
     """Hides console cursor"""                                                                                                                         #
                                                                                                                                                        #
-    ci = _CursorInfo()                                                                                                                                 # 
+    ci = _CursorInfo()                                                                                                                                 #
     handle = ctypes.windll.kernel32.GetStdHandle(-11)                                                                                                  #
-    ctypes.windll.kernel32.GetConsoleCursorInfo(handle, ctypes.byref(ci))                                                                              # 
+    ctypes.windll.kernel32.GetConsoleCursorInfo(handle, ctypes.byref(ci))                                                                              #
     ci.visible = False                                                                                                                                 #
     ctypes.windll.kernel32.SetConsoleCursorInfo(handle, ctypes.byref(ci))                                                                              #
 #******************************************************************************************************************************************************#
@@ -59,18 +59,18 @@ class colors:                                                                   
                                                                                                                                                        #
     """Enum like class that keeps colors for console text"""                                                                                           #
                                                                                                                                                        #
-    GREEN = '\033[92m'                                                                                                                                 # 
-    RED   = '\033[91m'                                                                                                                                 # 
+    GREEN = '\033[92m'                                                                                                                                 #
+    RED   = '\033[91m'                                                                                                                                 #
     WHITE = '\033[0m'                                                                                                                                  #
 #******************************************************************************************************************************************************#
 
 
-#******************************************************************************************************************************************************#  
+#******************************************************************************************************************************************************#
 globalWS = None #current Web Socket                                                                                                                    #
 class Server:                                                                                                                                          #
                                                                                                                                                        #
     """Represents a WSGI Server"""                                                                                                                     #
-                                                                                                                                                       # 
+                                                                                                                                                       #
     def __init__(self):                                                                                                                                #
         self.proc = FileWatcherProcess(self)                                                                                                           #
                                                                                                                                                        #
@@ -107,14 +107,26 @@ class FileWatcherProcess:                                                       
                                                                                                                                                        #
         """Starts the process"""                                                                                                                       #
                                                                                                                                                        #
-        self.proc = subprocess.Popen(args, stdout=subprocess.PIPE)                                                                                     #
-        threading.Thread(target = FileWatcherProcess.parse_output, args = [self]).start()                                                              #
+        try:                                                                                                                                           #
+            self.proc = subprocess.Popen(args, stdout=subprocess.PIPE)                                                                                 #
+            threading.Thread(target = FileWatcherProcess.parse_output, args = [self]).start()                                                          #
+        except Exception:                                                                                                                              #
+            if ctypes.windll.user32.MessageBoxA(0, ctypes.c_char_p("Make sure app file tree is correct and filewatcher folder contains all "           #
+                "required files. Do you want to see more info on how to solve this?".encode("utf-8")), ctypes.c_char_p("FileWatcher not started"       #
+                .encode("utf-8")), 0x00000004 | 0x00000020 | 0x00001000) == 6:                                                                         #
+                                                                                                                                                       #
+                os.system("start https://github.com/INeedADollar/Reload-Server#how-to-use")                                                            #
+                                                                                                                                                       #
+            sys.exit(0)                                                                                                                                #
                                                                                                                                                        #
     def closeProcess(self):                                                                                                                            #
                                                                                                                                                        #
         """Closes the process"""                                                                                                                       #
                                                                                                                                                        #
-        self.proc.terminate()                                                                                                                          #
+        try:                                                                                                                                           #
+            self.proc.terminate()                                                                                                                      #
+        except Exception:                                                                                                                              #
+            pass                                                                                                                                       #
                                                                                                                                                        #
     @staticmethod                                                                                                                                      #
     def parse_output(fileWatcherProcess):                                                                                                              #
@@ -123,7 +135,7 @@ class FileWatcherProcess:                                                       
                                                                                                                                                        #
         while True:                                                                                                                                    #
             line = fileWatcherProcess.proc.stdout.readline().decode("utf-8")                                                                           #
-                                                                                                                                                       #                                                                                                                                     #
+                                                                                                                                                       #                                                                                                                                     
             if line == '':                                                                                                                             #                                                   
                 break;                                                                                                                                 #
                                                                                                                                                        #
@@ -141,7 +153,7 @@ class FileWatcherProcess:                                                       
                     args.append(fileWatcherProcess.htmlFile)                                                                                           #
                 else:                                                                                                                                  #
                     fileWatcherProcess.workingDirectory = None                                                                                         #
-                    fileWatcherProcess.htmlFile = None                                                                                                 #        
+                    fileWatcherProcess.htmlFile = None                                                                                                 #
                     ctypes.windll.user32.MessageBoxA(0, ctypes.c_char_p("Selected HTML file was moved or deleted! Please choose other file!"           #
                         .encode("utf-8")), ctypes.c_char_p("File deleted".encode("utf-8")), 0x00000000 | 0x00000040 | 0x00001000)                      #
                                                                                                                                                        #
@@ -168,10 +180,8 @@ class FileWatcherProcess:                                                       
                                                                                                                                                        #
         """Static method for closing the process. Used when needing a static method"""                                                                 #
                                                                                                                                                        #
-        try:                                                                                                                                           #
+        if isinstance(fileWatcherProcess, FileWatcherProcess):                                                                                         #                                                   
             fileWatcherProcess.closeProcess()                                                                                                          #
-        except Exception:                                                                                                                              #
-            pass                                                                                                                                       #                                                                                                                                                       
 #******************************************************************************************************************************************************#
 
  
@@ -201,7 +211,7 @@ def echo_socket(ws, path = None):                                               
             pass                                                                                                                                       #
                                                                                                                                                        #
     print(colors.RED + "SOCKET DISCONNECTED\n\n")                                                                                                      #
-                                                                                                                                                       #                                                                                                                                                     
+                                                                                                                                                       #
 @app.route('/', defaults={'path': ''})                                                                                                                 #
 @app.route('/<path:path>')                                                                                                                             #
 def catch_all(path):                                                                                                                                   #
@@ -219,7 +229,7 @@ def catch_all(path):                                                            
 #******************************************************************************************************************************************************#
 
 
-#******************************************************************************************************************************************************#        
+#******************************************************************************************************************************************************#
 if __name__ == "__main__":                                                                                                                             #
                                                                                                                                                        #
     """Main"""                                                                                                                                         #
