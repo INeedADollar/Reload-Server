@@ -6,7 +6,7 @@
 
 Windows app that let's you build a website easier by reloading it at every file save. It also supports css and javascript files, updating the list of files to watch for changes at every file save. P.S. Browser with WebSockets support needed in order to work!
 
-## Using app
+## How to use
 
 To start using the app, even if you compiled yourself or you downloaded from [Releases section](https://github.com/INeedADollar/Reload-Server/releases), you need to have a file structure like this:
 
